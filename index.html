@@ -128,8 +128,9 @@ body{font-family:'Montserrat',sans-serif;background:var(--cream);color:var(--dar
 let allP=[],prods=[],curP=null,curV=null;
 
 function init(){
-  const t=localStorage.getItem('ficha-token');
-  if(t){document.getElementById('sh-token').value=t;connectShopify();}
+  document.getElementById('sh-store').value='macramexico.myshopify.com';
+  document.getElementById('sh-token').value='ed5a6e0de155a2e7425099cabfb12492';
+  setTimeout(()=>connectShopify(),500);
 }
 
 async function connectShopify(){
